@@ -1,6 +1,7 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import { getBlogPosts } from "@/data/blog";
 import Link from "next/link";
+import { ReturnButton } from "@/components/return-button";
 
 export const metadata = {
   title: "Blog",
@@ -46,6 +47,9 @@ export default async function BlogPage() {
             </Link>
           </BlurFade>
         ))}
+      <div className="mt-8">
+        <ReturnButton />
+      </div>
     </section>
   );
 }

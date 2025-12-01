@@ -105,7 +105,7 @@ export default async function Blog({
         dangerouslySetInnerHTML={{ __html: post.source }}
       ></article>
       {/* tag list + return button */}
-      <div className="flex flex-col items-start gap-3 mt-8">
+      <div className="flex flex-col items-start space-y-4 mt-8">
         {post.metadata.tags && post.metadata.tags.length > 0 && (
           <div className="flex flex-wrap gap-2">
             {post.metadata.tags.map((tag: string) => (
