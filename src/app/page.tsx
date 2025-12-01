@@ -136,35 +136,25 @@ export default async function Page() {
             </div>
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 14}>
-            <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
+            <div>
               {thoughts.map((thought, id) => (
                 <BlurFade
                   key={thought.file + id}
                   delay={BLUR_FADE_DELAY * 15 + id * 0.05}
                 >
-                  <li className="relative ml-10 py-4">
-                    <div className="absolute -left-16 top-2 flex items-center justify-center bg-white rounded-full">
-                      <Avatar className="border size-12 m-auto">
-                        <AvatarImage
-                          src={DATA.avatarUrl}
-                          alt={DATA.name}
-                          className="object-contain"
-                        />
-                        <AvatarFallback>{DATA.name}</AvatarFallback>
-                      </Avatar>
-                    </div>
-                    <div className="flex flex-1 flex-col justify-start gap-1">
-                      <h2 className="leading-none text-muted-foreground">
+                  <div className="flex flex-col space-y-1 mb-4">
+                    <div className="w-full flex flex-col">
+                      <p className="tracking-tight">
                         {thought.metadata.summary}
-                      </h2>
-                      <time className="text-xs text-muted-foreground">
+                      </p>
+                      <p className="h-6 text-xs text-muted-foreground">
                         {thought.metadata.createdAt}
-                      </time>
+                      </p>
                     </div>
-                  </li>
+                  </div>
                 </BlurFade>
               ))}
-            </ul>
+            </div>
           </BlurFade>
         </div>
       </section>
