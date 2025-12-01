@@ -8,10 +8,16 @@ import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
+import { getThoughts } from "@/data/thought";
 
 const BLUR_FADE_DELAY = 0.04;
 
-export default function Page() {
+export default async function Page() {
+  const thoughts = (await getThoughts())
+    .sort((a, b) =>
+      new Date(a.metadata.createdAt) > new Date(b.metadata.createdAt) ? -1 : 1
+    )
+    .slice(0, 7);
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
       <section id="hero">
@@ -109,6 +115,57 @@ export default function Page() {
               </BlurFade>
             ))}
           </div>
+        </div>
+      </section>
+      <section id="thoughts">
+        <div className="space-y-12 w-full py-12">
+          <BlurFade delay={BLUR_FADE_DELAY * 13}>
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                  Recent Thoughts
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  Short ideas & inspirations
+                </h2>
+                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  A few short thoughts and inspirations I&apos;ve written
+                  recently. Like tech tweets.
+                </p>
+              </div>
+            </div>
+          </BlurFade>
+          <BlurFade delay={BLUR_FADE_DELAY * 14}>
+            <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
+              {thoughts.map((thought, id) => (
+                <BlurFade
+                  key={thought.file + id}
+                  delay={BLUR_FADE_DELAY * 15 + id * 0.05}
+                >
+                  <li className="relative ml-10 py-4">
+                    <div className="absolute -left-16 top-2 flex items-center justify-center bg-white rounded-full">
+                      <Avatar className="border size-12 m-auto">
+                        <AvatarImage
+                          src={DATA.avatarUrl}
+                          alt={DATA.name}
+                          className="object-contain"
+                        />
+                        <AvatarFallback>{DATA.name}</AvatarFallback>
+                      </Avatar>
+                    </div>
+                    <div className="flex flex-1 flex-col justify-start gap-1">
+                      <h2 className="leading-none text-muted-foreground">
+                        {thought.metadata.summary}
+                      </h2>
+                      <time className="text-xs text-muted-foreground">
+                        {thought.metadata.createdAt}
+                      </time>
+                    </div>
+                  </li>
+                </BlurFade>
+              ))}
+            </ul>
+          </BlurFade>
         </div>
       </section>
       <section id="projects">
