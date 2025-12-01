@@ -31,7 +31,9 @@ export default async function ThoughtsPage() {
         .map((thought, id) => (
           <BlurFade delay={BLUR_FADE_DELAY * 2 + id * 0.05} key={id}>
             <div className="w-full flex flex-col">
-              <p className="tracking-tight">{thought.metadata.summary}</p>
+              <p className="tracking-tight whitespace-pre-line">
+                {thought.metadata.summary}
+              </p>
               <p className="h-6 text-xs text-muted-foreground">
                 {thought.metadata.createdAt}
               </p>

@@ -144,7 +144,7 @@ export default async function Page() {
                 >
                   <div className="flex flex-col space-y-1 mb-4">
                     <div className="w-full flex flex-col">
-                      <p className="tracking-tight">
+                      <p className="tracking-tight whitespace-pre-line">
                         {thought.metadata.summary}
                       </p>
                       <p className="h-6 text-xs text-muted-foreground">
