@@ -47,9 +47,11 @@ export default async function BlogPage() {
             </Link>
           </BlurFade>
         ))}
-      <div className="mt-8">
-        <ReturnButton />
-      </div>
+      <BlurFade delay={BLUR_FADE_DELAY * 2 + posts.length * 0.05}>
+        <div className="mt-10">
+          <ReturnButton />
+        </div>
+      </BlurFade>
     </section>
   );
 }
