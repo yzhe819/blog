@@ -58,16 +58,28 @@ export const DATA = {
 
   work: [
     {
-      company: "Atomic Finance",
-      href: "https://atomic.finance",
+      company: "RSS3",
+      href: "https://rss3.io/",
       badges: [],
       location: "Remote",
-      title: "Bitcoin Protocol Engineer",
-      logoUrl: "/atomic.png",
-      start: "May 2021",
-      end: "Oct 2022",
+      title: "Senior Software Engineer",
+      logoUrl: "/rss3.webp",
+      start: "Jul 2024",
+      end: "Dec 2025",
       description:
-        "Implemented an open-source Typescript SDK for the Bitcoin Discrete Logarithm Contract (DLC) protocol specification. Dockerized all microservices and set up a production Kubernetes cluster. Architected a data lake using AWS S3 and Athena for historical backtesting of Bitcoin trading strategies. Built a mobile application using React Native and TypeScript.",
+        "RSS3 is the open information layer. It is by far the biggest information network with more than 1.4 billion requests in 2022. By constructing a network covering all decentralized networks, RSS3 bridges Web3 to AI, search, and social.",
+    },
+    {
+      company: "RSS3",
+      href: "https://rss3.io/",
+      badges: [],
+      location: "Remote",
+      title: "Software Engineer",
+      logoUrl: "/rss3.webp",
+      start: "Oct 2023",
+      end: "Jul 2024",
+      description:
+        "RSS3 is a decentralized network indexing and structuring open information, making it accessible and valuable for the next Twitter, Google, and OpenAI.",
     },
   ],
   education: [
@@ -107,12 +119,30 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "xLog",
+      href: "https://xlog.app/about",
+      dates: "2025",
+      active: true,
+      description:
+        "Write. Own. Earn.\n\nAn open-source creative community written on the blockchain.",
+      technologies: ["Editor", "Web3", "Markdown"],
+      links: [
+        {
+          type: "Website",
+          href: "https://xlog.app/about",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
       title: "MIT-6.S081 Labs",
       href: "https://github.com/yzhe819/MIT-6.S081",
       dates: "2022",
       active: true,
       description:
-        "MIT 6.S081 lab code sprint (Operating Systems course labs)—late-night debugging, high-stakes kernel panics, and the soul of the server on display.",
+        "MIT 6.S081 lab code sprint. The actual kernel development of the operating system. An eternal classic—a holy grail of computer science.",
       technologies: ["C", "Operating Systems", "Kernel", "MIT"],
       links: [
         {
