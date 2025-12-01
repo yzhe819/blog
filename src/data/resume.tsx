@@ -8,10 +8,9 @@ export const DATA = {
   location: "Auckland, New Zealand",
   locationLink: "https://www.google.com/maps/place/auckland",
   description:
-    "I studied Software Engineering at the University of Auckland. Now I'm building code I love—life’s too short for boring code.",
-  summary:
-    "Four years of soaking in software engineering at the University of Auckland—first year was a general engineering buffet, then dove deep into the world of code, coffee, and stack traces. Passionate about compilers, operating systems, and building cool things. My bug count is high, but my code adventure is even higher. See my journey on GitHub!",
-  avatarUrl: "/me.png",
+    "I studied Software Engineering and Mathematics from the world. Now I'm building code I love—life’s too short for boring code.",
+  summary: "With a passion for building wonderful web3 products.",
+  avatarUrl: "https://avatars.githubusercontent.com/u/68207314?v=4",
   skills: [
     "React",
     "Next.js",
@@ -20,10 +19,13 @@ export const DATA = {
     "Python",
     "Go",
     "Postgres",
+    "Supabase",
     "Docker",
     "Kubernetes",
     "Java",
     "C++",
+    "C",
+    "Matlab",
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -41,16 +43,16 @@ export const DATA = {
       },
       X: {
         name: "X",
-        url: "https://dub.sh/dillion-twitter",
+        url: "",
         icon: Icons.x,
-        navbar: true,
-      },
-      email: {
-        name: "Send Email",
-        url: "#",
-        icon: Icons.email,
         navbar: false,
       },
+      // email: {
+      //   name: "Send Email",
+      //   url: "#",
+      //   icon: Icons.email,
+      //   navbar: false,
+      // },
     },
   },
 
@@ -72,14 +74,34 @@ export const DATA = {
     {
       school: "University of Auckland",
       href: "https://www.auckland.ac.nz/",
-      degree:
-        "Bachelor of Engineering (Honours) in Software Engineering (General Engineering in Year 1)",
-      logoUrl: "/auckland.png",
-      start: "2019",
+      degree: "Master of Science (MSc) in Mathematics",
+      logoUrl: "/uoa.jpg",
+      start: "2026",
+      end: "?",
+      details: [
+        "Postgraduate study in Mathematics increases knowledge and understanding across a broader and deeper range of topics.",
+      ],
+    },
+    {
+      school: "University of Auckland",
+      href: "https://www.auckland.ac.nz/",
+      degree: "Bachelor of Engineering (Honours) in Software Engineering",
+      logoUrl: "/uoa.jpg",
+      start: "2020",
       end: "2023",
       details: [
-        "Year 1: Learned a bit of everything in general engineering (and how to survive group assignments).",
-        "From Year 2 on: Focused on Software Engineering as caffeine intake increased proportionally with code complexity.",
+        "Focused on Software Engineering as caffeine intake increased proportionally with code complexity.",
+      ],
+    },
+    {
+      school: "University of Auckland",
+      href: "https://www.auckland.ac.nz/",
+      degree: "Bachelor of Engineering (Honours) in General Engineering",
+      logoUrl: "/uoa.jpg",
+      start: "2019",
+      end: "2020",
+      details: [
+        "Learned a bit of everything in general engineering (and how to survive group assignments).",
       ],
     },
   ],
