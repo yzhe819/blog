@@ -4,6 +4,8 @@ import { formatDate } from "@/lib/utils";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
+import { Badge } from "@/components/ui/badge";
+import { ReturnButton } from "@/components/return-button";
 
 export async function generateStaticParams() {
   const posts = await getBlogPosts();
@@ -102,6 +104,19 @@ export default async function Blog({
         className="prose dark:prose-invert"
         dangerouslySetInnerHTML={{ __html: post.source }}
       ></article>
+      {/* tag list + return button */}
+      <div className="flex flex-col items-start gap-3 mt-8">
+        {post.metadata.tags && post.metadata.tags.length > 0 && (
+          <div className="flex flex-wrap gap-2">
+            {post.metadata.tags.map((tag: string) => (
+              <Badge key={tag} variant="secondary">
+                {tag}
+              </Badge>
+            ))}
+          </div>
+        )}
+        <ReturnButton />
+      </div>
     </section>
   );
 }
