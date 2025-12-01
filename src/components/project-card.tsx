@@ -69,6 +69,15 @@ export function ProjectCard({
             className="h-40 w-full overflow-hidden object-cover object-top"
           />
         )}
+        {!image && !video && (
+          <div className="flex h-40 w-full items-center justify-center bg-muted text-lg font-bold text-muted-foreground select-none opacity-50">
+            {title
+              .split(" ")
+              .filter(Boolean)
+              .map((w) => w.toUpperCase())
+              .slice(0, 1)}
+          </div>
+        )}
       </Link>
       <CardHeader className="px-2">
         <div className="space-y-1">

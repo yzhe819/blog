@@ -109,11 +109,11 @@ export const DATA = {
     {
       title: "MIT-6.S081 Labs",
       href: "https://github.com/yzhe819/MIT-6.S081",
-      dates: "2024",
+      dates: "2022",
       active: true,
       description:
         "MIT 6.S081 lab code sprint (Operating Systems course labs)—late-night debugging, high-stakes kernel panics, and the soul of the server on display.",
-      technologies: ["C", "Operating Systems"],
+      technologies: ["C", "Operating Systems", "Kernel", "MIT"],
       links: [
         {
           type: "Source",
@@ -125,13 +125,13 @@ export const DATA = {
       video: "",
     },
     {
-      title: "CCompiler",
+      title: "C Compiler",
       href: "https://github.com/yzhe819/CCompiler",
-      dates: "2023",
+      dates: "2022",
       active: true,
       description:
-        "A personal C compiler project built for fun and growth. From parsing to codegen—where C turns into magic. One million segfaults later, it works!",
-      technologies: ["C"],
+        "A personal C compiler project built for fun and growth. From parsing to codegen—where C turns into magic.",
+      technologies: ["C", "Interpreter", "Tokenizer"],
       links: [
         {
           type: "Source",
@@ -149,7 +149,7 @@ export const DATA = {
       active: true,
       description:
         "Roll your own Vue3. A minimal reimplementation using TypeScript, to feel the true magic of reactivity from scratch.",
-      technologies: ["TypeScript", "Frontend"],
+      technologies: ["Vue.js", "TypeScript", "Frontend"],
       links: [
         {
           type: "Source",
