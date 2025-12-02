@@ -203,5 +203,15 @@ export const DATA = {
       mlh: "https://open.network/",
       links: [],
     },
+    {
+      title: "RSS3 Value Sublayer - VSL",
+      dates: "October 2023",
+      location: "Remote",
+      description:
+        "The first native gas Ethereum Layer2 with adjusted OP Stack and NEAR DA, handling the value and ownership of Open Information",
+      image: "/rss3.webp",
+      mlh: "https://rss3.io/what-is-rss3",
+      links: [],
+    },
   ],
 } as const;
